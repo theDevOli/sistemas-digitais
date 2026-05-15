@@ -1,0 +1,39 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+ENTITY cronometro IS
+	PORT(
+		-- CLOCK
+		clock, clear : IN  STD_LOGIC;
+		-- DISPLAY
+		saida_display : OUT STD_LOGIC_VECTOR (6 DOWNTO 0);
+		-- LED
+		led : OUT UNSIGNED (3 DOWNTO 0)
+	);
+END cronometro;
+
+ARCHITECTURE arch OF cronometro IS
+	SIGNAL contador : UNSIGNED(3 DOWNTO 0) := "0000";
+	SIGNAL temp_led : UNSIGNED(3 DOWNTO 0) := "0000";
+BEGIN
+	PROCESS(clock, clear)
+	BEGIN
+		-- RESET
+		IF clear = '1' OR (to_integer(temp_led) = 6 AND to_integer(contador) = 9) THEN
+			contador <= "0000";
+			temp_led <= "0000";
+		ELSIF rising_edge(clock) THEN
+			IF to_integer(contador) = 9 THEN
+				contador <= "0000";
+				temp_led <= temp_led + 1;
+			ELSE
+				contador <= contador + 1;
+			END IF;
+		END IF;
+	END PROCESS;
+
+	led <= temp_led;
+	U1 : ENTITY work.display PORT MAP(contador,saida_display);
+
+END arch;

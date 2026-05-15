@@ -1,0 +1,41 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+ENTITY display IS
+	PORT(
+		entrada	:	IN		UNSIGNED (3 DOWNTO 0);
+		saida		:	OUT	STD_LOGIC_VECTOR (6 DOWNTO 0)
+	);
+END display;
+
+ARCHiTECTURE arch OF display IS
+BEGIN
+	PROCESS(entrada)
+	BEGIN
+		CASE entrada IS
+			WHEN 0 => 
+				saida <= "1111110";
+			WHEN 1 =>
+				saida <= "0110000";
+			WHEN 2 =>
+				saida <= "1101101";
+			WHEN 3 =>
+				saida <= "1111001";
+			WHEN 4 =>
+				saida <= "0110011";
+			WHEN 5 =>
+				saida <= "1011011";
+			WHEN 6 =>
+				saida <= "1011111";
+			WHEN 7 =>
+				saida <= "1110000";
+			WHEN 8 =>
+				saida <= "1111111";
+			WHEN 9 =>
+				saida <= "1111011";
+			WHEN OTHERS =>
+				saida <= "0000000";
+		END CASE;
+	END PROCESS;
+END arch;
