@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cronometro
-Thu May 14 22:38:33 2026
+Tue May 19 22:18:40 2026
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -13,10 +13,13 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -43,14 +46,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu May 14 22:38:33 2026       ;
+; Analysis & Synthesis Status     ; Successful - Tue May 19 22:18:40 2026       ;
 ; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                   ; cronometro                                  ;
 ; Top-level Entity Name           ; cronometro                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 8                                           ;
-; Total pins                      ; 13                                          ;
+; Total registers                 ; 41                                          ;
+; Total pins                      ; 14                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -163,8 +166,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-14        ;   0.0%      ;
+;     Processors 2-14        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -175,6 +177,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------+---------+
 ; cronometro.vhd                   ; yes             ; User VHDL File  ; /home/daniel/sistemas-digitais/quartus/cronometro.vhd ;         ;
 ; display.vhd                      ; yes             ; User VHDL File  ; /home/daniel/sistemas-digitais/quartus/display.vhd    ;         ;
+; asc.vhd                          ; yes             ; User VHDL File  ; /home/daniel/sistemas-digitais/quartus/asc.vhd        ;         ;
+; des.vhd                          ; yes             ; User VHDL File  ; /home/daniel/sistemas-digitais/quartus/des.vhd        ;         ;
+; divisor_1s.vhd                   ; yes             ; User VHDL File  ; /home/daniel/sistemas-digitais/quartus/divisor_1s.vhd ;         ;
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------+---------+
 
 
@@ -183,37 +188,74 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 10          ;
+; Estimate of Logic utilization (ALMs needed) ; 42          ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 17          ;
+; Combinational ALUT usage for logic          ; 70          ;
 ;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 2           ;
-;     -- 5 input functions                    ; 2           ;
+;     -- 6 input functions                    ; 14          ;
+;     -- 5 input functions                    ; 8           ;
 ;     -- 4 input functions                    ; 11          ;
-;     -- <=3 input functions                  ; 2           ;
+;     -- <=3 input functions                  ; 37          ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 8           ;
+; Dedicated logic registers                   ; 41          ;
 ;                                             ;             ;
-; I/O pins                                    ; 13          ;
+; I/O pins                                    ; 14          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
-; Maximum fan-out node                        ; contador[0] ;
-; Maximum fan-out                             ; 14          ;
-; Total fan-out                               ; 118         ;
-; Average fan-out                             ; 2.31        ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 41          ;
+; Total fan-out                               ; 432         ;
+; Average fan-out                             ; 3.11        ;
 +---------------------------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                       ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name    ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------+-------------+--------------+
-; |cronometro                ; 17 (10)             ; 8 (8)                     ; 0                 ; 0          ; 13   ; 0            ; |cronometro            ; cronometro  ; work         ;
-;    |display:U1|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cronometro|display:U1 ; display     ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------+-------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+-------------+--------------+
+; |cronometro                ; 70 (11)             ; 41 (0)                    ; 0                 ; 0          ; 14   ; 0            ; |cronometro                         ; cronometro  ; work         ;
+;    |asc:U1|                ; 42 (13)             ; 33 (8)                    ; 0                 ; 0          ; 0    ; 0            ; |cronometro|asc:U1                  ; asc         ; work         ;
+;       |divisor_1s:U_DIV|   ; 29 (29)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |cronometro|asc:U1|divisor_1s:U_DIV ; divisor_1s  ; work         ;
+;    |des:U2|                ; 17 (10)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |cronometro|des:U2                  ; des         ; work         ;
+;       |display:U1|         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cronometro|des:U2|display:U1       ; display     ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                            ;
++-----------------------------------------+-----------------------------------------------------+
+; Register name                           ; Reason for Removal                                  ;
++-----------------------------------------+-----------------------------------------------------+
+; des:U2|divisor_1s:U_DIV|tick_signal     ; Merged with asc:U1|divisor_1s:U_DIV|tick_signal     ;
+; des:U2|divisor_1s:U_DIV|counter_div[22] ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[22] ;
+; des:U2|divisor_1s:U_DIV|counter_div[19] ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[19] ;
+; des:U2|divisor_1s:U_DIV|counter_div[15] ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[15] ;
+; des:U2|divisor_1s:U_DIV|counter_div[14] ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[14] ;
+; des:U2|divisor_1s:U_DIV|counter_div[13] ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[13] ;
+; des:U2|divisor_1s:U_DIV|counter_div[10] ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[10] ;
+; des:U2|divisor_1s:U_DIV|counter_div[8]  ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[8]  ;
+; des:U2|divisor_1s:U_DIV|counter_div[23] ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[23] ;
+; des:U2|divisor_1s:U_DIV|counter_div[21] ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[21] ;
+; des:U2|divisor_1s:U_DIV|counter_div[20] ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[20] ;
+; des:U2|divisor_1s:U_DIV|counter_div[18] ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[18] ;
+; des:U2|divisor_1s:U_DIV|counter_div[17] ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[17] ;
+; des:U2|divisor_1s:U_DIV|counter_div[16] ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[16] ;
+; des:U2|divisor_1s:U_DIV|counter_div[12] ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[12] ;
+; des:U2|divisor_1s:U_DIV|counter_div[11] ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[11] ;
+; des:U2|divisor_1s:U_DIV|counter_div[9]  ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[9]  ;
+; des:U2|divisor_1s:U_DIV|counter_div[7]  ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[7]  ;
+; des:U2|divisor_1s:U_DIV|counter_div[6]  ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[6]  ;
+; des:U2|divisor_1s:U_DIV|counter_div[5]  ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[5]  ;
+; des:U2|divisor_1s:U_DIV|counter_div[4]  ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[4]  ;
+; des:U2|divisor_1s:U_DIV|counter_div[3]  ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[3]  ;
+; des:U2|divisor_1s:U_DIV|counter_div[2]  ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[2]  ;
+; des:U2|divisor_1s:U_DIV|counter_div[1]  ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[1]  ;
+; des:U2|divisor_1s:U_DIV|counter_div[0]  ; Merged with asc:U1|divisor_1s:U_DIV|counter_div[0]  ;
+; Total Number of Removed Registers = 25  ;                                                     ;
++-----------------------------------------+-----------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -221,14 +263,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 8     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 41    ;
+; Number of registers using Synchronous Clear  ; 24    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 8     ;
+; Number of registers using Asynchronous Clear ; 41    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 12    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; des:U2|contador[0]                     ; 13      ;
+; des:U2|contador[3]                     ; 12      ;
+; des:U2|temp_led[1]                     ; 5       ;
+; des:U2|temp_led[2]                     ; 4       ;
+; Total number of inverted registers = 4 ;         ;
++----------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |cronometro|des:U2|temp_led[3] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |cronometro|des:U2|contador[2] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |cronometro|asc:U1|temp_led[3] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |cronometro|asc:U1|contador[0] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |cronometro|des:U2|temp_led[2] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |cronometro|des:U2|contador[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
 
 
 +-----------------------------------------------------+
@@ -236,19 +305,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 8                           ;
-;     CLR               ; 8                           ;
-; arriav_lcell_comb     ; 23                          ;
-;     normal            ; 23                          ;
+; arriav_ff             ; 41                          ;
+;     CLR               ; 5                           ;
+;     CLR SCLR          ; 24                          ;
+;     ENA CLR           ; 12                          ;
+; arriav_lcell_comb     ; 76                          ;
+;     arith             ; 24                          ;
+;         1 data inputs ; 24                          ;
+;     normal            ; 52                          ;
 ;         1 data inputs ; 7                           ;
-;         3 data inputs ; 1                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 8                           ;
 ;         4 data inputs ; 11                          ;
-;         5 data inputs ; 2                           ;
-;         6 data inputs ; 2                           ;
-; boundary_port         ; 13                          ;
+;         5 data inputs ; 8                           ;
+;         6 data inputs ; 14                          ;
+; boundary_port         ; 14                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.58                        ;
+; Max LUT depth         ; 3.30                        ;
+; Average LUT depth     ; 2.30                        ;
 +-----------------------+-----------------------------+
 
 
@@ -267,30 +341,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Thu May 14 22:38:29 2026
+    Info: Processing started: Tue May 19 22:18:36 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cronometro -c cronometro
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file cronometro.vhd
-    Info (12022): Found design unit 1: cronometro-arch File: /home/daniel/sistemas-digitais/quartus/cronometro.vhd Line: 16
+    Info (12022): Found design unit 1: cronometro-arch File: /home/daniel/sistemas-digitais/quartus/cronometro.vhd Line: 18
     Info (12023): Found entity 1: cronometro File: /home/daniel/sistemas-digitais/quartus/cronometro.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file display.vhd
     Info (12022): Found design unit 1: display-arch File: /home/daniel/sistemas-digitais/quartus/display.vhd Line: 12
     Info (12023): Found entity 1: display File: /home/daniel/sistemas-digitais/quartus/display.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file asc.vhd
+    Info (12022): Found design unit 1: asc-arch File: /home/daniel/sistemas-digitais/quartus/asc.vhd Line: 13
+    Info (12023): Found entity 1: asc File: /home/daniel/sistemas-digitais/quartus/asc.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file des.vhd
+    Info (12022): Found design unit 1: des-arch File: /home/daniel/sistemas-digitais/quartus/des.vhd Line: 16
+    Info (12023): Found entity 1: des File: /home/daniel/sistemas-digitais/quartus/des.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file divisor_1s.vhd
+    Info (12022): Found design unit 1: divisor_1s-arch File: /home/daniel/sistemas-digitais/quartus/divisor_1s.vhd Line: 13
+    Info (12023): Found entity 1: divisor_1s File: /home/daniel/sistemas-digitais/quartus/divisor_1s.vhd Line: 5
 Info (12127): Elaborating entity "cronometro" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at cronometro.vhd(23): signal "temp_led" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/daniel/sistemas-digitais/quartus/cronometro.vhd Line: 23
-Warning (10492): VHDL Process Statement warning at cronometro.vhd(23): signal "contador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/daniel/sistemas-digitais/quartus/cronometro.vhd Line: 23
-Info (12128): Elaborating entity "display" for hierarchy "display:U1" File: /home/daniel/sistemas-digitais/quartus/cronometro.vhd Line: 37
+Info (12128): Elaborating entity "asc" for hierarchy "asc:U1" File: /home/daniel/sistemas-digitais/quartus/cronometro.vhd Line: 22
+Info (12128): Elaborating entity "divisor_1s" for hierarchy "asc:U1|divisor_1s:U_DIV" File: /home/daniel/sistemas-digitais/quartus/asc.vhd Line: 23
+Info (12128): Elaborating entity "display" for hierarchy "asc:U1|display:U1" File: /home/daniel/sistemas-digitais/quartus/asc.vhd Line: 48
+Info (12128): Elaborating entity "des" for hierarchy "des:U2" File: /home/daniel/sistemas-digitais/quartus/cronometro.vhd Line: 23
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 30 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
+Info (21057): Implemented 85 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
     Info (21059): Implemented 11 output pins
-    Info (21061): Implemented 17 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 1082 megabytes
-    Info: Processing ended: Thu May 14 22:38:33 2026
+    Info (21061): Implemented 71 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 1059 megabytes
+    Info: Processing ended: Tue May 19 22:18:40 2026
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:05
 

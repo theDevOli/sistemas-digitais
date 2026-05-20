@@ -48,6 +48,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "btn",
+					"strict" : false
+				},
+				{
 					"name" : "clock",
 					"strict" : false
 				},

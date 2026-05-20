@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Thu May 14 22:38:33 2026
+Analysis & Synthesis Status : Successful - Tue May 19 22:18:40 2026
 Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 Revision Name : cronometro
 Top-level Entity Name : cronometro
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 8
-Total pins : 13
+Total registers : 41
+Total pins : 14
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

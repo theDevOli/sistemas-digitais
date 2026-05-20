@@ -3,37 +3,33 @@ USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.NUMERIC_STD.ALL;
 
 ENTITY cronometro IS
-	PORT(
-		-- CLOCK
-		clock, clear : IN  STD_LOGIC;
-		-- DISPLAY
-		saida_display : OUT STD_LOGIC_VECTOR (6 DOWNTO 0);
-		-- LED
-		led : OUT UNSIGNED (3 DOWNTO 0)
-	);
+    PORT(
+		  --CLOCK
+        clock, clear : IN  STD_LOGIC;
+		  -- BOTAO DE SELECAO
+        btn          : IN  STD_LOGIC;  -- 0->des, 1->asc
+		  -- DISPLAY DE 7 SEG
+        saida_display : OUT STD_LOGIC_VECTOR (6 DOWNTO 0);
+		  -- LEDS
+        led          : OUT UNSIGNED (3 DOWNTO 0)
+    );
 END cronometro;
 
 ARCHITECTURE arch OF cronometro IS
-	SIGNAL contador : UNSIGNED(3 DOWNTO 0) := "0000";
-	SIGNAL temp_led : UNSIGNED(3 DOWNTO 0) := "0000";
+    SIGNAL display_asc, display_des : STD_LOGIC_VECTOR (6 DOWNTO 0);
+    SIGNAL led_asc, led_des : UNSIGNED (3 DOWNTO 0);
 BEGIN
-	PROCESS(clock, clear)
-	BEGIN
-		-- RESET
-		IF clear = '1' OR (to_integer(temp_led) = 6 AND to_integer(contador) = 9) THEN
-			contador <= "0000";
-			temp_led <= "0000";
-		ELSIF rising_edge(clock) THEN
-			IF to_integer(contador) = 9 THEN
-				contador <= "0000";
-				temp_led <= temp_led + 1;
-			ELSE
-				contador <= contador + 1;
-			END IF;
-		END IF;
-	END PROCESS;
-
-	led <= temp_led;
-	U1 : ENTITY work.display PORT MAP(contador,saida_display);
-
+    U1 : ENTITY work.asc PORT MAP(clock, clear, display_asc, led_asc);
+    U2 : ENTITY work.des PORT MAP(clock, clear, display_des, led_des);
+    
+    PROCESS(btn, display_asc, display_des, led_asc, led_des)
+    BEGIN
+        IF btn = '1' THEN
+            saida_display <= display_asc;
+            led <= led_asc;
+        ELSE
+            saida_display <= display_des;
+            led <= led_des;
+        END IF;
+    END PROCESS;
 END arch;

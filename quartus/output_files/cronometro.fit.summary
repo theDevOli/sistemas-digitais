@@ -1,13 +1,13 @@
-Fitter Status : Successful - Thu May 14 22:38:55 2026
+Fitter Status : Successful - Tue May 19 22:19:02 2026
 Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 Revision Name : cronometro
 Top-level Entity Name : cronometro
 Family : Cyclone V
 Device : 5CGXFC7C7F23C8
 Timing Models : Final
-Logic utilization (in ALMs) : 10 / 56,480 ( < 1 % )
-Total registers : 15
-Total pins : 13 / 268 ( 5 % )
+Logic utilization (in ALMs) : 43 / 56,480 ( < 1 % )
+Total registers : 52
+Total pins : 14 / 268 ( 5 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 7,024,640 ( 0 % )
 Total RAM Blocks : 0 / 686 ( 0 % )

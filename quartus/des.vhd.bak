@@ -1,0 +1,43 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+ENTITY des IS
+	PORT(
+		-- CLOCK
+		clock, clear : IN STD_LOGIC;
+		-- DISPLAY
+		saida_display : OUT STD_LOGIC_VECTOR (6 DOWNTO 0);
+		-- LED
+		led : OUT UNSIGNED (3 DOWNTO 0)
+	);
+END des;
+
+ARCHITECTURE arch OF des IS
+	SIGNAL contador : UNSIGNED(3 DOWNTO 0) := "1001"; -- 9
+	SIGNAL temp_led : UNSIGNED(3 DOWNTO 0) := "110";
+BEGIN
+
+	PROCESS(clock, clear)
+	BEGIN
+
+		-- RESET
+		IF clear = '1' THEN
+			contador <= "1001";
+			temp_led <= "0110";
+		ELSIF rising_edge(clock) THEN
+			IF to_integer(contador) = 0 THEN
+				contador <= "1001";
+				IF to_integer(temp_led) >= 0 THEN
+					temp_led <= temp_led - 1;
+				END IF;
+			ELSE
+				contador <= contador - 1;
+			END IF;
+		END IF;
+	END PROCESS;
+
+	led <= temp_led;
+	U1 : ENTITY work.display PORT MAP(contador, saida_display);
+
+END arch;
