@@ -1,5 +1,5 @@
 Fitter report for cronometro
-Tue May 19 22:19:02 2026
+Wed May 20 21:03:14 2026
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -62,7 +62,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Tue May 19 22:19:02 2026       ;
+; Fitter Status                   ; Successful - Wed May 20 21:03:14 2026       ;
 ; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                   ; cronometro                                  ;
 ; Top-level Entity Name           ; cronometro                                  ;
@@ -70,7 +70,7 @@ https://fpgasoftware.intel.com/eula.
 ; Device                          ; 5CGXFC7C7F23C8                              ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 43 / 56,480 ( < 1 % )                       ;
-; Total registers                 ; 52                                          ;
+; Total registers                 ; 56                                          ;
 ; Total pins                      ; 14 / 268 ( 5 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 7,024,640 ( 0 % )                       ;
@@ -162,8 +162,8 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 4            ;   0.2%      ;
 ;     Processor 5            ;   0.2%      ;
 ;     Processor 6            ;   0.2%      ;
-;     Processor 7            ;   0.1%      ;
-;     Processors 8-14        ;   0.1%      ;
+;     Processor 7            ;   0.2%      ;
+;     Processors 8-14        ;   0.2%      ;
 +----------------------------+-------------+
 
 
@@ -173,16 +173,22 @@ https://fpgasoftware.intel.com/eula.
 ; Node                                    ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                                  ; Destination Port ; Destination Port Name ;
 +-----------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------------------------+------------------+-----------------------+
 ; clock~inputCLKENA0                      ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                   ;                  ;                       ;
-; asc:U1|contador[0]                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; asc:U1|contador[0]~DUPLICATE                      ;                  ;                       ;
 ; asc:U1|contador[1]                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; asc:U1|contador[1]~DUPLICATE                      ;                  ;                       ;
+; asc:U1|contador[2]                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; asc:U1|contador[2]~DUPLICATE                      ;                  ;                       ;
 ; asc:U1|contador[3]                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; asc:U1|contador[3]~DUPLICATE                      ;                  ;                       ;
-; asc:U1|divisor_1s:U_DIV|counter_div[0]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; asc:U1|divisor_1s:U_DIV|counter_div[0]~DUPLICATE  ;                  ;                       ;
+; asc:U1|divisor_1s:U_DIV|counter_div[4]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; asc:U1|divisor_1s:U_DIV|counter_div[4]~DUPLICATE  ;                  ;                       ;
+; asc:U1|divisor_1s:U_DIV|counter_div[7]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; asc:U1|divisor_1s:U_DIV|counter_div[7]~DUPLICATE  ;                  ;                       ;
+; asc:U1|divisor_1s:U_DIV|counter_div[8]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; asc:U1|divisor_1s:U_DIV|counter_div[8]~DUPLICATE  ;                  ;                       ;
+; asc:U1|divisor_1s:U_DIV|counter_div[9]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; asc:U1|divisor_1s:U_DIV|counter_div[9]~DUPLICATE  ;                  ;                       ;
 ; asc:U1|divisor_1s:U_DIV|counter_div[10] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; asc:U1|divisor_1s:U_DIV|counter_div[10]~DUPLICATE ;                  ;                       ;
-; asc:U1|divisor_1s:U_DIV|counter_div[13] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; asc:U1|divisor_1s:U_DIV|counter_div[13]~DUPLICATE ;                  ;                       ;
+; asc:U1|divisor_1s:U_DIV|counter_div[12] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; asc:U1|divisor_1s:U_DIV|counter_div[12]~DUPLICATE ;                  ;                       ;
+; asc:U1|temp_led[0]                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; asc:U1|temp_led[0]~DUPLICATE                      ;                  ;                       ;
 ; asc:U1|temp_led[2]                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; asc:U1|temp_led[2]~DUPLICATE                      ;                  ;                       ;
-; asc:U1|temp_led[3]                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; asc:U1|temp_led[3]~DUPLICATE                      ;                  ;                       ;
+; des:U2|contador[0]                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; des:U2|contador[0]~DUPLICATE                      ;                  ;                       ;
 ; des:U2|contador[1]                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; des:U2|contador[1]~DUPLICATE                      ;                  ;                       ;
-; des:U2|temp_led[1]                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; des:U2|temp_led[1]~DUPLICATE                      ;                  ;                       ;
+; des:U2|contador[2]                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; des:U2|contador[2]~DUPLICATE                      ;                  ;                       ;
+; des:U2|contador[3]                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; des:U2|contador[3]~DUPLICATE                      ;                  ;                       ;
+; des:U2|temp_led[0]                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; des:U2|temp_led[0]~DUPLICATE                      ;                  ;                       ;
 ; des:U2|temp_led[2]                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; des:U2|temp_led[2]~DUPLICATE                      ;                  ;                       ;
 +-----------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------------------------+------------------+-----------------------+
 
@@ -236,8 +242,8 @@ The pin-out file can be found in /home/daniel/sistemas-digitais/quartus/output_f
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 43 / 56,480        ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 43                 ;       ;
 ;     [A] ALMs used in final placement [=a+b+c+d]             ; 45 / 56,480        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 20                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 24                 ;       ;
+;         [a] ALMs used for LUT logic and registers           ; 19                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 25                 ;       ;
 ;         [c] ALMs used for registers                         ; 1                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
 ;     [B] Estimate of ALMs recoverable by dense packing       ; 2 / 56,480         ; < 1 % ;
@@ -249,25 +255,25 @@ The pin-out file can be found in /home/daniel/sistemas-digitais/quartus/output_f
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 6 / 5,648          ; < 1 % ;
-;     -- Logic LABs                                           ; 6                  ;       ;
+; Total LABs:  partially or completely used                   ; 7 / 5,648          ; < 1 % ;
+;     -- Logic LABs                                           ; 7                  ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 71                 ;       ;
+; Combinational ALUT usage for logic                          ; 73                 ;       ;
 ;     -- 7 input functions                                    ; 0                  ;       ;
-;     -- 6 input functions                                    ; 14                 ;       ;
-;     -- 5 input functions                                    ; 8                  ;       ;
-;     -- 4 input functions                                    ; 11                 ;       ;
-;     -- <=3 input functions                                  ; 38                 ;       ;
-; Combinational ALUT usage for route-throughs                 ; 0                  ;       ;
+;     -- 6 input functions                                    ; 12                 ;       ;
+;     -- 5 input functions                                    ; 6                  ;       ;
+;     -- 4 input functions                                    ; 15                 ;       ;
+;     -- <=3 input functions                                  ; 40                 ;       ;
+; Combinational ALUT usage for route-throughs                 ; 2                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 52                 ;       ;
+; Dedicated logic registers                                   ; 56                 ;       ;
 ;     -- By type:                                             ;                    ;       ;
-;         -- Primary logic registers                          ; 41 / 112,960       ; < 1 % ;
-;         -- Secondary logic registers                        ; 11 / 112,960       ; < 1 % ;
+;         -- Primary logic registers                          ; 39 / 112,960       ; < 1 % ;
+;         -- Secondary logic registers                        ; 17 / 112,960       ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
-;         -- Design implementation registers                  ; 41                 ;       ;
-;         -- Routing optimization registers                   ; 11                 ;       ;
+;         -- Design implementation registers                  ; 39                 ;       ;
+;         -- Routing optimization registers                   ; 17                 ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 14 / 268           ; 5 %   ;
@@ -302,11 +308,11 @@ The pin-out file can be found in /home/daniel/sistemas-digitais/quartus/output_f
 ; Impedance control blocks                                    ; 0 / 3              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.0% / 0.0% / 0.0% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 0.4% / 0.4% / 0.3% ;       ;
-; Maximum fan-out                                             ; 52                 ;       ;
-; Highest non-global fan-out                                  ; 52                 ;       ;
-; Total fan-out                                               ; 475                ;       ;
-; Average fan-out                                             ; 3.12               ;       ;
+; Peak interconnect usage (total/H/V)                         ; 0.5% / 0.5% / 0.4% ;       ;
+; Maximum fan-out                                             ; 56                 ;       ;
+; Highest non-global fan-out                                  ; 56                 ;       ;
+; Total fan-out                                               ; 491                ;       ;
+; Average fan-out                                             ; 3.07               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -318,8 +324,8 @@ The pin-out file can be found in /home/daniel/sistemas-digitais/quartus/output_f
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 43 / 56480 ( < 1 % )  ; 0 / 56480 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 43                    ; 0                              ;
 ;     [A] ALMs used in final placement [=a+b+c+d]             ; 45 / 56480 ( < 1 % )  ; 0 / 56480 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 20                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 24                    ; 0                              ;
+;         [a] ALMs used for LUT logic and registers           ; 19                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 25                    ; 0                              ;
 ;         [c] ALMs used for registers                         ; 1                     ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
 ;     [B] Estimate of ALMs recoverable by dense packing       ; 2 / 56480 ( < 1 % )   ; 0 / 56480 ( 0 % )              ;
@@ -331,28 +337,28 @@ The pin-out file can be found in /home/daniel/sistemas-digitais/quartus/output_f
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 6 / 5648 ( < 1 % )    ; 0 / 5648 ( 0 % )               ;
-;     -- Logic LABs                                           ; 6                     ; 0                              ;
+; Total LABs:  partially or completely used                   ; 7 / 5648 ( < 1 % )    ; 0 / 5648 ( 0 % )               ;
+;     -- Logic LABs                                           ; 7                     ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
-; Combinational ALUT usage for logic                          ; 71                    ; 0                              ;
+; Combinational ALUT usage for logic                          ; 73                    ; 0                              ;
 ;     -- 7 input functions                                    ; 0                     ; 0                              ;
-;     -- 6 input functions                                    ; 14                    ; 0                              ;
-;     -- 5 input functions                                    ; 8                     ; 0                              ;
-;     -- 4 input functions                                    ; 11                    ; 0                              ;
-;     -- <=3 input functions                                  ; 38                    ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 0                     ; 0                              ;
+;     -- 6 input functions                                    ; 12                    ; 0                              ;
+;     -- 5 input functions                                    ; 6                     ; 0                              ;
+;     -- 4 input functions                                    ; 15                    ; 0                              ;
+;     -- <=3 input functions                                  ; 40                    ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 2                     ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
-;         -- Primary logic registers                          ; 41 / 112960 ( < 1 % ) ; 0 / 112960 ( 0 % )             ;
-;         -- Secondary logic registers                        ; 11 / 112960 ( < 1 % ) ; 0 / 112960 ( 0 % )             ;
+;         -- Primary logic registers                          ; 39 / 112960 ( < 1 % ) ; 0 / 112960 ( 0 % )             ;
+;         -- Secondary logic registers                        ; 17 / 112960 ( < 1 % ) ; 0 / 112960 ( 0 % )             ;
 ;     -- By function:                                         ;                       ;                                ;
-;         -- Design implementation registers                  ; 41                    ; 0                              ;
-;         -- Routing optimization registers                   ; 11                    ; 0                              ;
+;         -- Design implementation registers                  ; 39                    ; 0                              ;
+;         -- Routing optimization registers                   ; 17                    ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
@@ -369,16 +375,16 @@ The pin-out file can be found in /home/daniel/sistemas-digitais/quartus/output_f
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 475                   ; 0                              ;
-;     -- Registered Connections                               ; 195                   ; 0                              ;
+;     -- Total Connections                                    ; 491                   ; 0                              ;
+;     -- Registered Connections                               ; 186                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
 ;     -- Top                                                  ; 0                     ; 0                              ;
 ;     -- hard_block:auto_generated_inst                       ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Partition Interface                                         ;                       ;                                ;
-;     -- Input Ports                                          ; 3                     ; 0                              ;
-;     -- Output Ports                                         ; 11                    ; 0                              ;
+;     -- Input Ports                                          ; 4                     ; 0                              ;
+;     -- Output Ports                                         ; 10                    ; 0                              ;
 ;     -- Bidir Ports                                          ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Registered Ports                                            ;                       ;                                ;
@@ -397,15 +403,16 @@ The pin-out file can be found in /home/daniel/sistemas-digitais/quartus/output_f
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Input Pins                                                                                                                                                                                                                                                                           ;
-+-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; Name  ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
-+-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; btn   ; L17   ; 5B       ; 89           ; 37           ; 20           ; 11                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; clear ; L22   ; 5B       ; 89           ; 36           ; 54           ; 52                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; clock ; M16   ; 5B       ; 89           ; 35           ; 60           ; 52                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-+-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                                                                                                                              ;
++----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
+; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
++----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
+; btnChose ; M21   ; 5B       ; 89           ; 37           ; 54           ; 10                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; btnStop  ; L18   ; 5B       ; 89           ; 38           ; 20           ; 10                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; clear    ; M20   ; 5B       ; 89           ; 37           ; 37           ; 56                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; clock    ; M16   ; 5B       ; 89           ; 35           ; 60           ; 56                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
++----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -413,17 +420,16 @@ The pin-out file can be found in /home/daniel/sistemas-digitais/quartus/output_f
 +------------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name             ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Output Buffer Delay ; Output Buffer Delay Control ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +------------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
-; led[0]           ; M22   ; 5B       ; 89           ; 36           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; led[1]           ; K17   ; 5B       ; 89           ; 37           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; led[2]           ; M20   ; 5B       ; 89           ; 37           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; led[3]           ; M21   ; 5B       ; 89           ; 37           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; saida_display[0] ; N21   ; 5B       ; 89           ; 35           ; 94           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; saida_display[1] ; L19   ; 5B       ; 89           ; 38           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; saida_display[2] ; K22   ; 5B       ; 89           ; 38           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; saida_display[3] ; N20   ; 5B       ; 89           ; 35           ; 77           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; led[0]           ; N19   ; 5B       ; 89           ; 36           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; led[1]           ; L22   ; 5B       ; 89           ; 36           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; led[2]           ; M22   ; 5B       ; 89           ; 36           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; saida_display[0] ; L19   ; 5B       ; 89           ; 38           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; saida_display[1] ; M18   ; 5B       ; 89           ; 36           ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; saida_display[2] ; L17   ; 5B       ; 89           ; 37           ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; saida_display[3] ; K22   ; 5B       ; 89           ; 38           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 ; saida_display[4] ; K21   ; 5B       ; 89           ; 38           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; saida_display[5] ; L18   ; 5B       ; 89           ; 38           ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; saida_display[6] ; N16   ; 5B       ; 89           ; 35           ; 43           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; saida_display[5] ; N16   ; 5B       ; 89           ; 35           ; 43           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; saida_display[6] ; K17   ; 5B       ; 89           ; 37           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 +------------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -708,12 +714,12 @@ The pin-out file can be found in /home/daniel/sistemas-digitais/quartus/output_f
 ; K14      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; K15      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; K16      ; 424        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; K17      ; 284        ; 5B       ; led[1]                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; K17      ; 284        ; 5B       ; saida_display[6]                ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; K18      ;            ; 5B       ; VCCIO5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; K19      ; 407        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; K20      ; 405        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; K21      ; 289        ; 5B       ; saida_display[4]                ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; K22      ; 291        ; 5B       ; saida_display[2]                ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; K22      ; 291        ; 5B       ; saida_display[3]                ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; L1       ; 27         ; B1L      ; GND                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L2       ; 26         ; B1L      ; GND                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -730,12 +736,12 @@ The pin-out file can be found in /home/daniel/sistemas-digitais/quartus/output_f
 ; L14      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; L15      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L16      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
-; L17      ; 286        ; 5B       ; btn                             ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; L18      ; 290        ; 5B       ; saida_display[5]                ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; L19      ; 288        ; 5B       ; saida_display[1]                ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; L17      ; 286        ; 5B       ; saida_display[2]                ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; L18      ; 290        ; 5B       ; btnStop                         ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; L19      ; 288        ; 5B       ; saida_display[0]                ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; L20      ;            ; 5B       ; VREFB5BN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L21      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; L22      ; 283        ; 5B       ; clear                           ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; L22      ; 283        ; 5B       ; led[1]                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; M1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; M2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; M3       ;            ; --       ; VCCH_GXBL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -753,11 +759,11 @@ The pin-out file can be found in /home/daniel/sistemas-digitais/quartus/output_f
 ; M15      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; M16      ; 278        ; 5B       ; clock                           ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; M17      ;            ; 5B       ; VCCPD5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; M18      ; 282        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; M18      ; 282        ; 5B       ; saida_display[1]                ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; M19      ;            ; 5B       ; VCCIO5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; M20      ; 285        ; 5B       ; led[2]                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; M21      ; 287        ; 5B       ; led[3]                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; M22      ; 281        ; 5B       ; led[0]                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; M20      ; 285        ; 5B       ; clear                           ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; M21      ; 287        ; 5B       ; btnChose                        ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; M22      ; 281        ; 5B       ; led[2]                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; N1       ; 28         ; B0L      ; GXB_NC                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; N2       ; 29         ; B0L      ; GXB_NC                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; N3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -773,12 +779,12 @@ The pin-out file can be found in /home/daniel/sistemas-digitais/quartus/output_f
 ; N13      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; N14      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; N15      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; N16      ; 276        ; 5B       ; saida_display[6]                ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; N16      ; 276        ; 5B       ; saida_display[5]                ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; N17      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; N18      ;            ; 5B       ; VCCPD5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; N19      ; 280        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; N20      ; 277        ; 5B       ; saida_display[3]                ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; N21      ; 279        ; 5B       ; saida_display[0]                ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; N19      ; 280        ; 5B       ; led[0]                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; N20      ; 277        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; N21      ; 279        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; N22      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; P1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; P2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -953,8 +959,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; led[0]           ; Incomplete set of assignments ;
 ; led[1]           ; Incomplete set of assignments ;
 ; led[2]           ; Incomplete set of assignments ;
-; led[3]           ; Incomplete set of assignments ;
-; btn              ; Incomplete set of assignments ;
+; btnChose         ; Incomplete set of assignments ;
+; btnStop          ; Incomplete set of assignments ;
 ; clock            ; Incomplete set of assignments ;
 ; clear            ; Incomplete set of assignments ;
 ; saida_display[0] ; Missing location assignment   ;
@@ -967,8 +973,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; led[0]           ; Missing location assignment   ;
 ; led[1]           ; Missing location assignment   ;
 ; led[2]           ; Missing location assignment   ;
-; led[3]           ; Missing location assignment   ;
-; btn              ; Missing location assignment   ;
+; btnChose         ; Missing location assignment   ;
+; btnStop          ; Missing location assignment   ;
 ; clock            ; Missing location assignment   ;
 ; clear            ; Missing location assignment   ;
 +------------------+-------------------------------+
@@ -979,11 +985,11 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Entity Name ; Library Name ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------+-------------+--------------+
-; |cronometro                ; 42.5 (9.0)           ; 44.0 (9.0)                       ; 1.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 71 (12)             ; 52 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 14   ; 0            ; |cronometro                         ; cronometro  ; work         ;
-;    |asc:U1|                ; 24.7 (7.7)           ; 26.5 (8.5)                       ; 1.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 42 (13)             ; 41 (13)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cronometro|asc:U1                  ; asc         ; work         ;
-;       |divisor_1s:U_DIV|   ; 17.0 (17.0)          ; 18.0 (18.0)                      ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 29 (29)             ; 28 (28)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cronometro|asc:U1|divisor_1s:U_DIV ; divisor_1s  ; work         ;
-;    |des:U2|                ; 8.3 (5.0)            ; 8.5 (5.0)                        ; 0.2 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 17 (10)             ; 11 (11)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cronometro|des:U2                  ; des         ; work         ;
-;       |display:U1|         ; 3.3 (3.3)            ; 3.5 (3.5)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cronometro|des:U2|display:U1       ; display     ; work         ;
+; |cronometro                ; 43.0 (12.0)          ; 44.0 (12.0)                      ; 1.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 73 (21)             ; 56 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 14   ; 0            ; |cronometro                         ; cronometro  ; work         ;
+;    |asc:U1|                ; 23.0 (5.5)           ; 24.0 (5.5)                       ; 1.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 37 (7)              ; 43 (11)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cronometro|asc:U1                  ; asc         ; work         ;
+;       |divisor_1s:U_DIV|   ; 17.5 (17.5)          ; 18.5 (18.5)                      ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 30 (30)             ; 32 (32)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cronometro|asc:U1|divisor_1s:U_DIV ; divisor_1s  ; work         ;
+;    |des:U2|                ; 8.0 (5.2)            ; 8.0 (5.2)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 15 (8)              ; 13 (13)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cronometro|des:U2                  ; des         ; work         ;
+;       |display:U1|         ; 2.7 (2.7)            ; 2.8 (2.8)                        ; 0.1 (0.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |cronometro|des:U2|display:U1       ; display     ; work         ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1003,8 +1009,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led[0]           ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; led[1]           ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; led[2]           ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; led[3]           ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; btn              ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; btnChose         ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; btnStop          ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; clock            ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; clear            ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +------------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
@@ -1015,11 +1021,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------+-------------------+---------+
 ; Source Pin / Fanout                                      ; Pad To Core Index ; Setting ;
 +----------------------------------------------------------+-------------------+---------+
-; btn                                                      ;                   ;         ;
+; btnChose                                                 ;                   ;         ;
 ;      - led~0                                             ; 1                 ; 0       ;
 ;      - led~1                                             ; 1                 ; 0       ;
 ;      - led~2                                             ; 1                 ; 0       ;
-;      - led~3                                             ; 1                 ; 0       ;
 ;      - saida_display~0                                   ; 1                 ; 0       ;
 ;      - saida_display~1                                   ; 1                 ; 0       ;
 ;      - saida_display~2                                   ; 1                 ; 0       ;
@@ -1027,18 +1032,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - saida_display~4                                   ; 1                 ; 0       ;
 ;      - saida_display~5                                   ; 1                 ; 0       ;
 ;      - saida_display~6                                   ; 1                 ; 0       ;
+; btnStop                                                  ;                   ;         ;
+;      - saida_display[0]$latch                            ; 1                 ; 0       ;
+;      - saida_display[1]$latch                            ; 1                 ; 0       ;
+;      - saida_display[2]$latch                            ; 1                 ; 0       ;
+;      - saida_display[3]$latch                            ; 1                 ; 0       ;
+;      - saida_display[4]$latch                            ; 1                 ; 0       ;
+;      - saida_display[5]$latch                            ; 1                 ; 0       ;
+;      - saida_display[6]$latch                            ; 1                 ; 0       ;
+;      - led[0]$latch                                      ; 1                 ; 0       ;
+;      - led[1]$latch                                      ; 1                 ; 0       ;
+;      - led[2]$latch                                      ; 1                 ; 0       ;
 ; clock                                                    ;                   ;         ;
 ; clear                                                    ;                   ;         ;
 ;      - asc:U1|temp_led[0]                                ; 1                 ; 0       ;
 ;      - asc:U1|temp_led[1]                                ; 1                 ; 0       ;
 ;      - asc:U1|temp_led[2]                                ; 1                 ; 0       ;
-;      - asc:U1|temp_led[3]                                ; 1                 ; 0       ;
-;      - asc:U1|contador[0]                                ; 1                 ; 0       ;
 ;      - asc:U1|contador[1]                                ; 1                 ; 0       ;
 ;      - asc:U1|contador[2]                                ; 1                 ; 0       ;
 ;      - asc:U1|contador[3]                                ; 1                 ; 0       ;
-;      - des:U2|temp_led[0]                                ; 1                 ; 0       ;
-;      - des:U2|temp_led[3]                                ; 1                 ; 0       ;
+;      - des:U2|temp_led[1]                                ; 1                 ; 0       ;
 ;      - des:U2|contador[1]                                ; 1                 ; 0       ;
 ;      - des:U2|contador[2]                                ; 1                 ; 0       ;
 ;      - asc:U1|divisor_1s:U_DIV|counter_div[11]           ; 1                 ; 0       ;
@@ -1054,6 +1067,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - asc:U1|divisor_1s:U_DIV|counter_div[14]           ; 1                 ; 0       ;
 ;      - asc:U1|divisor_1s:U_DIV|counter_div[13]           ; 1                 ; 0       ;
 ;      - asc:U1|divisor_1s:U_DIV|counter_div[12]           ; 1                 ; 0       ;
+;      - asc:U1|divisor_1s:U_DIV|counter_div[24]           ; 1                 ; 0       ;
 ;      - asc:U1|divisor_1s:U_DIV|counter_div[10]           ; 1                 ; 0       ;
 ;      - asc:U1|divisor_1s:U_DIV|counter_div[9]            ; 1                 ; 0       ;
 ;      - asc:U1|divisor_1s:U_DIV|counter_div[8]            ; 1                 ; 0       ;
@@ -1067,20 +1081,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - asc:U1|divisor_1s:U_DIV|counter_div[0]            ; 1                 ; 0       ;
 ;      - des:U2|contador[3]                                ; 1                 ; 0       ;
 ;      - des:U2|contador[0]                                ; 1                 ; 0       ;
-;      - des:U2|temp_led[1]                                ; 1                 ; 0       ;
+;      - des:U2|temp_led[0]                                ; 1                 ; 0       ;
 ;      - des:U2|temp_led[2]                                ; 1                 ; 0       ;
 ;      - asc:U1|divisor_1s:U_DIV|tick_signal               ; 1                 ; 0       ;
-;      - asc:U1|divisor_1s:U_DIV|counter_div[13]~DUPLICATE ; 1                 ; 0       ;
+;      - asc:U1|divisor_1s:U_DIV|counter_div[12]~DUPLICATE ; 1                 ; 0       ;
 ;      - asc:U1|divisor_1s:U_DIV|counter_div[10]~DUPLICATE ; 1                 ; 0       ;
-;      - asc:U1|divisor_1s:U_DIV|counter_div[0]~DUPLICATE  ; 1                 ; 0       ;
-;      - asc:U1|contador[0]~DUPLICATE                      ; 1                 ; 0       ;
+;      - asc:U1|divisor_1s:U_DIV|counter_div[9]~DUPLICATE  ; 1                 ; 0       ;
+;      - asc:U1|divisor_1s:U_DIV|counter_div[8]~DUPLICATE  ; 1                 ; 0       ;
+;      - asc:U1|divisor_1s:U_DIV|counter_div[7]~DUPLICATE  ; 1                 ; 0       ;
+;      - asc:U1|divisor_1s:U_DIV|counter_div[4]~DUPLICATE  ; 1                 ; 0       ;
+;      - des:U2|contador[0]~DUPLICATE                      ; 1                 ; 0       ;
 ;      - asc:U1|contador[1]~DUPLICATE                      ; 1                 ; 0       ;
+;      - asc:U1|contador[2]~DUPLICATE                      ; 1                 ; 0       ;
 ;      - asc:U1|contador[3]~DUPLICATE                      ; 1                 ; 0       ;
 ;      - des:U2|contador[1]~DUPLICATE                      ; 1                 ; 0       ;
-;      - des:U2|temp_led[1]~DUPLICATE                      ; 1                 ; 0       ;
+;      - des:U2|contador[2]~DUPLICATE                      ; 1                 ; 0       ;
+;      - des:U2|contador[3]~DUPLICATE                      ; 1                 ; 0       ;
+;      - asc:U1|temp_led[0]~DUPLICATE                      ; 1                 ; 0       ;
+;      - des:U2|temp_led[0]~DUPLICATE                      ; 1                 ; 0       ;
 ;      - asc:U1|temp_led[2]~DUPLICATE                      ; 1                 ; 0       ;
 ;      - des:U2|temp_led[2]~DUPLICATE                      ; 1                 ; 0       ;
-;      - asc:U1|temp_led[3]~DUPLICATE                      ; 1                 ; 0       ;
 +----------------------------------------------------------+-------------------+---------+
 
 
@@ -1089,11 +1109,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                                ; Location             ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; asc:U1|divisor_1s:U_DIV|Equal0~4    ; LABCELL_X88_Y37_N0   ; 28      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; asc:U1|divisor_1s:U_DIV|tick_signal ; FF_X88_Y37_N2        ; 17      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; clear                               ; PIN_L22              ; 52      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; clock                               ; PIN_M16              ; 52      ; Clock        ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-; des:U2|temp_led[0]~1                ; MLABCELL_X87_Y37_N21 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; asc:U1|divisor_1s:U_DIV|Equal0~4    ; MLABCELL_X87_Y37_N18 ; 32      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; asc:U1|divisor_1s:U_DIV|tick_signal ; FF_X87_Y37_N5        ; 20      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; btnStop                             ; PIN_L18              ; 10      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; clear                               ; PIN_M20              ; 56      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; clock                               ; PIN_M16              ; 56      ; Clock        ; yes    ; Global Clock         ; GCLK10           ; --                        ;
 +-------------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1102,7 +1122,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------+----------------------+------------------+---------------------------+
 ; Name  ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------+----------+---------+----------------------+------------------+---------------------------+
-; clock ; PIN_M16  ; 52      ; Global Clock         ; GCLK10           ; --                        ;
+; clock ; PIN_M16  ; 56      ; Global Clock         ; GCLK10           ; --                        ;
 +-------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1111,23 +1131,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+------------------------+
 ; Routing Resource Type        ; Usage                  ;
 +------------------------------+------------------------+
-; Block interconnects          ; 73 / 374,484 ( < 1 % ) ;
+; Block interconnects          ; 94 / 374,484 ( < 1 % ) ;
 ; C12 interconnects            ; 0 / 16,664 ( 0 % )     ;
-; C2 interconnects             ; 17 / 155,012 ( < 1 % ) ;
-; C4 interconnects             ; 2 / 72,600 ( < 1 % )   ;
+; C2 interconnects             ; 14 / 155,012 ( < 1 % ) ;
+; C4 interconnects             ; 7 / 72,600 ( < 1 % )   ;
 ; DQS bus muxes                ; 0 / 30 ( 0 % )         ;
 ; DQS-18 I/O buses             ; 0 / 30 ( 0 % )         ;
 ; DQS-9 I/O buses              ; 0 / 30 ( 0 % )         ;
-; Direct links                 ; 19 / 374,484 ( < 1 % ) ;
+; Direct links                 ; 21 / 374,484 ( < 1 % ) ;
 ; Global clocks                ; 1 / 16 ( 6 % )         ;
 ; Horizontal periphery clocks  ; 0 / 72 ( 0 % )         ;
-; Local interconnects          ; 38 / 112,960 ( < 1 % ) ;
+; Local interconnects          ; 64 / 112,960 ( < 1 % ) ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )         ;
-; R14 interconnects            ; 0 / 15,868 ( 0 % )     ;
+; R14 interconnects            ; 1 / 15,868 ( < 1 % )   ;
 ; R14/C12 interconnect drivers ; 0 / 27,256 ( 0 % )     ;
-; R3 interconnects             ; 20 / 169,296 ( < 1 % ) ;
-; R6 interconnects             ; 26 / 330,800 ( < 1 % ) ;
-; Spine clocks                 ; 2 / 480 ( < 1 % )      ;
+; R3 interconnects             ; 29 / 169,296 ( < 1 % ) ;
+; R6 interconnects             ; 33 / 330,800 ( < 1 % ) ;
+; Spine clocks                 ; 1 / 480 ( < 1 % )      ;
 ; Wire stub REs                ; 0 / 20,834 ( 0 % )     ;
 +------------------------------+------------------------+
 
@@ -1187,9 +1207,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+--------------+
 ; Pin/Rules          ; IO_000002    ; IO_000003    ; IO_000001    ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007    ; IO_000008    ; IO_000022    ; IO_000021    ; IO_000046    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000047    ; IO_000020    ; IO_000019    ; IO_000018    ; IO_000015    ; IO_000014    ; IO_000013    ; IO_000012    ; IO_000011    ; IO_000010 ; IO_000009 ; IO_000034    ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+--------------+
-; Total Pass         ; 0            ; 0            ; 0            ; 0            ; 0            ; 14        ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 11           ; 0            ; 0            ; 0            ; 0            ; 0            ; 11           ; 0            ; 0            ; 0            ; 0            ; 11           ; 0            ; 14        ; 14        ; 0            ;
+; Total Pass         ; 0            ; 0            ; 0            ; 0            ; 0            ; 14        ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 10           ; 0            ; 0            ; 0            ; 0            ; 0            ; 10           ; 0            ; 0            ; 0            ; 0            ; 10           ; 0            ; 14        ; 14        ; 0            ;
 ; Total Unchecked    ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0            ;
-; Total Inapplicable ; 14           ; 14           ; 14           ; 14           ; 14           ; 0         ; 14           ; 14           ; 14           ; 14           ; 14           ; 14           ; 3            ; 14           ; 14           ; 14           ; 14           ; 14           ; 3            ; 14           ; 14           ; 14           ; 14           ; 3            ; 14           ; 0         ; 0         ; 14           ;
+; Total Inapplicable ; 14           ; 14           ; 14           ; 14           ; 14           ; 0         ; 14           ; 14           ; 14           ; 14           ; 14           ; 14           ; 4            ; 14           ; 14           ; 14           ; 14           ; 14           ; 4            ; 14           ; 14           ; 14           ; 14           ; 4            ; 14           ; 0         ; 0         ; 14           ;
 ; Total Fail         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0            ;
 ; saida_display[0]   ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 ; saida_display[1]   ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
@@ -1201,8 +1221,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led[0]             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 ; led[1]             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 ; led[2]             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; led[3]             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; btn                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; btnChose           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; btnStop            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 ; clock              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 ; clear              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+--------------+
@@ -1256,47 +1276,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; clock           ; clock                ; 15.3              ;
+; clock           ; btnStop              ; 16.2              ;
+; clock           ; clock                ; 7.1               ;
+; I/O             ; btnStop              ; 1.9               ;
+; clock,I/O       ; btnStop              ; 1.3               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+---------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                     ;
-+-----------------------------------------+-------------------------------------+-------------------+
-; Source Register                         ; Destination Register                ; Delay Added in ns ;
-+-----------------------------------------+-------------------------------------+-------------------+
-; asc:U1|temp_led[1]                      ; asc:U1|temp_led[3]                  ; 0.461             ;
-; asc:U1|temp_led[0]                      ; asc:U1|temp_led[1]                  ; 0.447             ;
-; asc:U1|contador[0]                      ; asc:U1|contador[2]                  ; 0.447             ;
-; asc:U1|contador[2]                      ; asc:U1|contador[3]                  ; 0.443             ;
-; des:U2|contador[0]                      ; des:U2|contador[3]                  ; 0.440             ;
-; des:U2|temp_led[0]                      ; des:U2|temp_led[2]                  ; 0.432             ;
-; des:U2|contador[3]                      ; des:U2|contador[1]                  ; 0.407             ;
-; asc:U1|contador[1]                      ; asc:U1|contador[2]                  ; 0.405             ;
-; asc:U1|contador[3]                      ; asc:U1|contador[1]                  ; 0.404             ;
-; des:U2|temp_led[1]                      ; des:U2|temp_led[2]                  ; 0.401             ;
-; des:U2|contador[1]                      ; des:U2|contador[3]                  ; 0.396             ;
-; des:U2|temp_led[3]                      ; des:U2|temp_led[0]                  ; 0.386             ;
-; des:U2|temp_led[2]                      ; des:U2|temp_led[0]                  ; 0.384             ;
-; des:U2|contador[2]                      ; des:U2|contador[3]                  ; 0.384             ;
-; asc:U1|temp_led[2]                      ; asc:U1|temp_led[3]                  ; 0.315             ;
-; asc:U1|temp_led[3]                      ; asc:U1|temp_led[3]                  ; 0.280             ;
-; asc:U1|divisor_1s:U_DIV|counter_div[12] ; asc:U1|divisor_1s:U_DIV|tick_signal ; 0.269             ;
-; asc:U1|divisor_1s:U_DIV|counter_div[10] ; asc:U1|divisor_1s:U_DIV|tick_signal ; 0.245             ;
-; asc:U1|divisor_1s:U_DIV|counter_div[9]  ; asc:U1|divisor_1s:U_DIV|tick_signal ; 0.245             ;
-; asc:U1|divisor_1s:U_DIV|counter_div[8]  ; asc:U1|divisor_1s:U_DIV|tick_signal ; 0.245             ;
-; asc:U1|divisor_1s:U_DIV|counter_div[7]  ; asc:U1|divisor_1s:U_DIV|tick_signal ; 0.245             ;
-; asc:U1|divisor_1s:U_DIV|counter_div[6]  ; asc:U1|divisor_1s:U_DIV|tick_signal ; 0.245             ;
-; asc:U1|divisor_1s:U_DIV|counter_div[5]  ; asc:U1|divisor_1s:U_DIV|tick_signal ; 0.174             ;
-; asc:U1|divisor_1s:U_DIV|counter_div[4]  ; asc:U1|divisor_1s:U_DIV|tick_signal ; 0.174             ;
-; asc:U1|divisor_1s:U_DIV|counter_div[3]  ; asc:U1|divisor_1s:U_DIV|tick_signal ; 0.174             ;
-; asc:U1|divisor_1s:U_DIV|counter_div[2]  ; asc:U1|divisor_1s:U_DIV|tick_signal ; 0.174             ;
-; asc:U1|divisor_1s:U_DIV|counter_div[1]  ; asc:U1|divisor_1s:U_DIV|tick_signal ; 0.174             ;
-; asc:U1|divisor_1s:U_DIV|counter_div[0]  ; asc:U1|divisor_1s:U_DIV|tick_signal ; 0.174             ;
-+-----------------------------------------+-------------------------------------+-------------------+
-Note: This table only shows the top 28 path(s) that have the largest delay added for hold.
++-----------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                   ;
++--------------------+------------------------+-------------------+
+; Source Register    ; Destination Register   ; Delay Added in ns ;
++--------------------+------------------------+-------------------+
+; asc:U1|contador[1] ; saida_display[2]$latch ; 0.672             ;
+; des:U2|contador[0] ; saida_display[3]$latch ; 0.660             ;
+; asc:U1|contador[3] ; saida_display[3]$latch ; 0.643             ;
+; asc:U1|contador[2] ; saida_display[2]$latch ; 0.615             ;
+; asc:U1|temp_led[0] ; led[0]$latch           ; 0.579             ;
+; des:U2|temp_led[0] ; led[0]$latch           ; 0.574             ;
+; asc:U1|temp_led[2] ; led[2]$latch           ; 0.571             ;
+; des:U2|temp_led[2] ; led[2]$latch           ; 0.568             ;
+; asc:U1|temp_led[1] ; led[1]$latch           ; 0.548             ;
+; des:U2|temp_led[1] ; led[1]$latch           ; 0.529             ;
+; des:U2|contador[1] ; saida_display[6]$latch ; 0.433             ;
+; des:U2|contador[3] ; des:U2|temp_led[0]     ; 0.399             ;
+; des:U2|contador[2] ; saida_display[3]$latch ; 0.348             ;
+; btnChose           ; led[0]$latch           ; 0.287             ;
+; btnStop            ; saida_display[0]$latch ; 0.249             ;
++--------------------+------------------------+-------------------+
+Note: This table only shows the top 15 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1313,12 +1323,13 @@ Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Ass
 Critical Warning (169085): No exact pin location assignment(s) for 14 pins of 14 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Info (184020): Starting Fitter periphery placement operations
 Info (11191): Automatically promoted 1 clock (1 global)
-    Info (11162): clock~inputCLKENA0 with 41 fanout uses global clock CLKCTRL_G10
+    Info (11162): clock~inputCLKENA0 with 39 fanout uses global clock CLKCTRL_G10
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:07
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:11
+Warning (335093): The Timing Analyzer is analyzing 10 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'cronometro.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
@@ -1326,26 +1337,26 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:05
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:04
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X78_Y35 to location X89_Y45
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.14 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
+Info (11888): Total time spent on timing analysis during the Fitter is 0.79 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
-Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 3217 megabytes
-    Info: Processing ended: Tue May 19 22:19:02 2026
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:01:03
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:05
+Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 3211 megabytes
+    Info: Processing ended: Wed May 20 21:03:14 2026
+    Info: Elapsed time: 00:00:48
+    Info: Total CPU time (on all processors): 00:03:11
 
 

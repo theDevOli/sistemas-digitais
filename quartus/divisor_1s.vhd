@@ -12,7 +12,7 @@ END divisor_1s;
 
 ARCHITECTURE arch OF divisor_1s IS
     -- Constantes do divisor (fixas para 12 MHz -> 1 Hz)
-    CONSTANT CLOCK_FREQ : INTEGER := 12_000_000;
+    CONSTANT CLOCK_FREQ : INTEGER := 27_000_000;
     CONSTANT TARGET_FREQ : INTEGER := 1;
     CONSTANT DIVISOR_MAX : INTEGER := (CLOCK_FREQ / TARGET_FREQ) - 1;
     

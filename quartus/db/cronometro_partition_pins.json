@@ -44,11 +44,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "led[3]",
+					"name" : "btnChose",
 					"strict" : false
 				},
 				{
-					"name" : "btn",
+					"name" : "btnStop",
 					"strict" : false
 				},
 				{

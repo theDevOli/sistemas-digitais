@@ -3,28 +3,36 @@ clock => asc:U1.clock
 clock => des:U2.clock
 clear => asc:U1.clear
 clear => des:U2.clear
-btn => saida_display.OUTPUTSELECT
-btn => saida_display.OUTPUTSELECT
-btn => saida_display.OUTPUTSELECT
-btn => saida_display.OUTPUTSELECT
-btn => saida_display.OUTPUTSELECT
-btn => saida_display.OUTPUTSELECT
-btn => saida_display.OUTPUTSELECT
-btn => led.OUTPUTSELECT
-btn => led.OUTPUTSELECT
-btn => led.OUTPUTSELECT
-btn => led.OUTPUTSELECT
-saida_display[0] <= saida_display.DB_MAX_OUTPUT_PORT_TYPE
-saida_display[1] <= saida_display.DB_MAX_OUTPUT_PORT_TYPE
-saida_display[2] <= saida_display.DB_MAX_OUTPUT_PORT_TYPE
-saida_display[3] <= saida_display.DB_MAX_OUTPUT_PORT_TYPE
-saida_display[4] <= saida_display.DB_MAX_OUTPUT_PORT_TYPE
-saida_display[5] <= saida_display.DB_MAX_OUTPUT_PORT_TYPE
-saida_display[6] <= saida_display.DB_MAX_OUTPUT_PORT_TYPE
-led[0] <= led.DB_MAX_OUTPUT_PORT_TYPE
-led[1] <= led.DB_MAX_OUTPUT_PORT_TYPE
-led[2] <= led.DB_MAX_OUTPUT_PORT_TYPE
-led[3] <= led.DB_MAX_OUTPUT_PORT_TYPE
+btnChose => saida_display.OUTPUTSELECT
+btnChose => saida_display.OUTPUTSELECT
+btnChose => saida_display.OUTPUTSELECT
+btnChose => saida_display.OUTPUTSELECT
+btnChose => saida_display.OUTPUTSELECT
+btnChose => saida_display.OUTPUTSELECT
+btnChose => saida_display.OUTPUTSELECT
+btnChose => led.OUTPUTSELECT
+btnChose => led.OUTPUTSELECT
+btnChose => led.OUTPUTSELECT
+btnStop => led[0]$latch.LATCH_ENABLE
+btnStop => led[1]$latch.LATCH_ENABLE
+btnStop => led[2]$latch.LATCH_ENABLE
+btnStop => saida_display[0]$latch.LATCH_ENABLE
+btnStop => saida_display[1]$latch.LATCH_ENABLE
+btnStop => saida_display[2]$latch.LATCH_ENABLE
+btnStop => saida_display[3]$latch.LATCH_ENABLE
+btnStop => saida_display[4]$latch.LATCH_ENABLE
+btnStop => saida_display[5]$latch.LATCH_ENABLE
+btnStop => saida_display[6]$latch.LATCH_ENABLE
+saida_display[0] << saida_display[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+saida_display[1] << saida_display[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+saida_display[2] << saida_display[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+saida_display[3] << saida_display[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+saida_display[4] << saida_display[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+saida_display[5] << saida_display[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+saida_display[6] << saida_display[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+led[0] << led[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+led[1] << led[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+led[2] << led[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cronometro|asc:U1
@@ -32,7 +40,6 @@ clock => divisor_1s:U_DIV.clock
 clock => temp_led[0].CLK
 clock => temp_led[1].CLK
 clock => temp_led[2].CLK
-clock => temp_led[3].CLK
 clock => contador[0].CLK
 clock => contador[1].CLK
 clock => contador[2].CLK
@@ -41,7 +48,6 @@ clear => divisor_1s:U_DIV.clear
 clear => temp_led[0].ACLR
 clear => temp_led[1].ACLR
 clear => temp_led[2].ACLR
-clear => temp_led[3].ACLR
 clear => contador[0].ACLR
 clear => contador[1].ACLR
 clear => contador[2].ACLR
@@ -56,7 +62,6 @@ saida_display[6] <= display:U1.saida[6]
 led[0] <= temp_led[0].DB_MAX_OUTPUT_PORT_TYPE
 led[1] <= temp_led[1].DB_MAX_OUTPUT_PORT_TYPE
 led[2] <= temp_led[2].DB_MAX_OUTPUT_PORT_TYPE
-led[3] <= temp_led[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cronometro|asc:U1|divisor_1s:U_DIV
@@ -85,6 +90,7 @@ clock => counter_div[20].CLK
 clock => counter_div[21].CLK
 clock => counter_div[22].CLK
 clock => counter_div[23].CLK
+clock => counter_div[24].CLK
 clear => tick_signal.ACLR
 clear => counter_div[0].ACLR
 clear => counter_div[1].ACLR
@@ -110,6 +116,7 @@ clear => counter_div[20].ACLR
 clear => counter_div[21].ACLR
 clear => counter_div[22].ACLR
 clear => counter_div[23].ACLR
+clear => counter_div[24].ACLR
 tick <= tick_signal.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -156,16 +163,14 @@ clock => divisor_1s:U_DIV.clock
 clock => temp_led[0].CLK
 clock => temp_led[1].CLK
 clock => temp_led[2].CLK
-clock => temp_led[3].CLK
 clock => contador[0].CLK
 clock => contador[1].CLK
 clock => contador[2].CLK
 clock => contador[3].CLK
 clear => divisor_1s:U_DIV.clear
-clear => temp_led[0].ACLR
-clear => temp_led[1].PRESET
+clear => temp_led[0].PRESET
+clear => temp_led[1].ACLR
 clear => temp_led[2].PRESET
-clear => temp_led[3].ACLR
 clear => contador[0].PRESET
 clear => contador[1].ACLR
 clear => contador[2].ACLR
@@ -180,7 +185,6 @@ saida_display[6] <= display:U1.saida[6]
 led[0] <= temp_led[0].DB_MAX_OUTPUT_PORT_TYPE
 led[1] <= temp_led[1].DB_MAX_OUTPUT_PORT_TYPE
 led[2] <= temp_led[2].DB_MAX_OUTPUT_PORT_TYPE
-led[3] <= temp_led[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cronometro|des:U2|divisor_1s:U_DIV
@@ -209,6 +213,7 @@ clock => counter_div[20].CLK
 clock => counter_div[21].CLK
 clock => counter_div[22].CLK
 clock => counter_div[23].CLK
+clock => counter_div[24].CLK
 clear => tick_signal.ACLR
 clear => counter_div[0].ACLR
 clear => counter_div[1].ACLR
@@ -234,6 +239,7 @@ clear => counter_div[20].ACLR
 clear => counter_div[21].ACLR
 clear => counter_div[22].ACLR
 clear => counter_div[23].ACLR
+clear => counter_div[24].ACLR
 tick <= tick_signal.DB_MAX_OUTPUT_PORT_TYPE
 
 
