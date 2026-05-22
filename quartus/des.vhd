@@ -16,7 +16,7 @@ END des;
 ARCHITECTURE arch OF des IS
     -- Sinais do cronômetro
     SIGNAL contador : UNSIGNED(3 DOWNTO 0) := "1001"; -- Conta de 9 a 0 (unidades)
-    SIGNAL temp_led : UNSIGNED(2 DOWNTO 0) := "110"; -- Conta de 6 a 0 (dezenas)
+    SIGNAL temp_led : UNSIGNED(2 DOWNTO 0) := "101"; -- Conta de 6 a 0 (dezenas)
 	 
     -- Sinais do divisor de clock
     SIGNAL tick_1s : STD_LOGIC := '0';

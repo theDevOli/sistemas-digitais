@@ -3,99 +3,99 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'btnStop'
-Slack : -4.272
-TNS   : -37.038
+Slack : -3.787
+TNS   : -34.438
 
 Type  : Slow 1100mV 85C Model Setup 'clock'
-Slack : -3.234
-TNS   : -122.780
+Slack : -3.272
+TNS   : -130.077
 
 Type  : Slow 1100mV 85C Model Hold 'clock'
-Slack : 0.514
+Slack : 0.523
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'btnStop'
-Slack : 1.355
+Slack : 1.151
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock'
 Slack : -0.724
-TNS   : -62.144
+TNS   : -57.707
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'btnStop'
-Slack : 0.294
+Slack : 0.317
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'btnStop'
-Slack : -4.481
-TNS   : -38.482
+Slack : -3.929
+TNS   : -35.151
 
 Type  : Slow 1100mV 0C Model Setup 'clock'
-Slack : -3.205
-TNS   : -122.310
+Slack : -3.290
+TNS   : -127.387
 
 Type  : Slow 1100mV 0C Model Hold 'clock'
-Slack : 0.538
+Slack : 0.541
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'btnStop'
-Slack : 1.423
+Slack : 1.153
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock'
 Slack : -0.724
-TNS   : -63.057
+TNS   : -58.573
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'btnStop'
-Slack : 0.243
+Slack : 0.335
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'btnStop'
-Slack : -1.218
-TNS   : -9.367
+Slack : -0.974
+TNS   : -8.022
 
 Type  : Fast 1100mV 85C Model Setup 'clock'
-Slack : -0.758
-TNS   : -20.844
+Slack : -0.777
+TNS   : -24.581
 
 Type  : Fast 1100mV 85C Model Hold 'clock'
-Slack : 0.185
+Slack : 0.194
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'btnStop'
-Slack : 0.597
+Slack : 0.519
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock'
 Slack : -0.084
-TNS   : -4.432
+TNS   : -4.156
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'btnStop'
-Slack : 0.023
+Slack : 0.028
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'btnStop'
-Slack : -1.116
-TNS   : -8.370
+Slack : -0.845
+TNS   : -7.001
 
 Type  : Fast 1100mV 0C Model Setup 'clock'
-Slack : -0.609
-TNS   : -16.345
+Slack : -0.624
+TNS   : -19.070
 
 Type  : Fast 1100mV 0C Model Hold 'clock'
-Slack : 0.177
+Slack : 0.187
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'btnStop'
-Slack : 0.557
+Slack : 0.475
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock'
 Slack : -0.083
-TNS   : -4.440
+TNS   : -4.146
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'btnStop'
-Slack : 0.010
+Slack : 0.030
 TNS   : 0.000
 
 ------------------------------------------------------------

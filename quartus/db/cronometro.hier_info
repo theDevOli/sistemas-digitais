@@ -23,16 +23,16 @@ btnStop => saida_display[3]$latch.LATCH_ENABLE
 btnStop => saida_display[4]$latch.LATCH_ENABLE
 btnStop => saida_display[5]$latch.LATCH_ENABLE
 btnStop => saida_display[6]$latch.LATCH_ENABLE
-saida_display[0] << saida_display[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
-saida_display[1] << saida_display[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
-saida_display[2] << saida_display[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
-saida_display[3] << saida_display[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
-saida_display[4] << saida_display[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
-saida_display[5] << saida_display[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
-saida_display[6] << saida_display[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
-led[0] << led[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
-led[1] << led[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
-led[2] << led[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+saida_display[0] <= saida_display[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+saida_display[1] <= saida_display[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+saida_display[2] <= saida_display[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+saida_display[3] <= saida_display[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+saida_display[4] <= saida_display[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+saida_display[5] <= saida_display[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+saida_display[6] <= saida_display[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+led[0] <= led[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= led[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= led[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cronometro|asc:U1

@@ -22,7 +22,7 @@ BEGIN
     -- Divisor de 1 segundo
     U_DIV : ENTITY work.divisor_1s PORT MAP(clock, clear, tick_1s);
     
-    -- PROCESS: Cronômetro CRESCENTE (0 a 60)
+    -- PROCESS: Cronômetro CRESCENTE (0 a 59)
     PROCESS(clock, clear)
     BEGIN
         IF clear = '1' THEN

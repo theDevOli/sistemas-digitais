@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cronometro
-Wed May 20 21:02:25 2026
+Wed May 20 21:49:51 2026
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -47,7 +47,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May 20 21:02:25 2026       ;
+; Analysis & Synthesis Status     ; Successful - Wed May 20 21:49:51 2026       ;
 ; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                   ; cronometro                                  ;
 ; Top-level Entity Name           ; cronometro                                  ;
@@ -167,8 +167,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-14        ;   0.0%      ;
+;     Processors 2-14        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -195,8 +194,8 @@ https://fpgasoftware.intel.com/eula.
 ; Combinational ALUT usage for logic          ; 72          ;
 ;     -- 7 input functions                    ; 0           ;
 ;     -- 6 input functions                    ; 12          ;
-;     -- 5 input functions                    ; 6           ;
-;     -- 4 input functions                    ; 15          ;
+;     -- 5 input functions                    ; 5           ;
+;     -- 4 input functions                    ; 16          ;
 ;     -- <=3 input functions                  ; 39          ;
 ;                                             ;             ;
 ; Dedicated logic registers                   ; 39          ;
@@ -292,7 +291,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 39    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 7     ;
+; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -318,7 +317,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |cronometro|des:U2|contador[2] ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |cronometro|asc:U1|temp_led[2] ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |cronometro|asc:U1|contador[0] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |cronometro|des:U2|temp_led[0] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |cronometro|des:U2|temp_led[0] ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |cronometro|des:U2|contador[3] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
 
@@ -329,17 +328,17 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 39                          ;
-;     CLR               ; 7                           ;
+;     CLR               ; 6                           ;
 ;     CLR SCLR          ; 25                          ;
-;     ENA CLR           ; 7                           ;
+;     ENA CLR           ; 8                           ;
 ; arriav_lcell_comb     ; 72                          ;
 ;     arith             ; 25                          ;
 ;         1 data inputs ; 25                          ;
 ;     normal            ; 47                          ;
 ;         1 data inputs ; 1                           ;
 ;         3 data inputs ; 13                          ;
-;         4 data inputs ; 15                          ;
-;         5 data inputs ; 6                           ;
+;         4 data inputs ; 16                          ;
+;         5 data inputs ; 5                           ;
 ;         6 data inputs ; 12                          ;
 ; boundary_port         ; 14                          ;
 ;                       ;                             ;
@@ -363,7 +362,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Wed May 20 21:02:18 2026
+    Info: Processing started: Wed May 20 21:49:44 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cronometro -c cronometro
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
@@ -400,19 +399,16 @@ Info (12128): Elaborating entity "divisor_1s" for hierarchy "asc:U1|divisor_1s:U
 Info (12128): Elaborating entity "display" for hierarchy "asc:U1|display:U1" File: /home/daniel/sistemas-digitais/quartus/asc.vhd Line: 48
 Info (12128): Elaborating entity "des" for hierarchy "des:U2" File: /home/daniel/sistemas-digitais/quartus/cronometro.vhd Line: 23
 Info (286030): Timing-Driven Synthesis is running
-Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register des:U2|temp_led[0] will power up to High File: /home/daniel/sistemas-digitais/quartus/des.vhd Line: 31
-    Critical Warning (18010): Register des:U2|temp_led[1] will power up to Low File: /home/daniel/sistemas-digitais/quartus/des.vhd Line: 31
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 87 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 10 output pins
     Info (21061): Implemented 73 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1078 megabytes
-    Info: Processing ended: Wed May 20 21:02:25 2026
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 1065 megabytes
+    Info: Processing ended: Wed May 20 21:49:51 2026
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Total CPU time (on all processors): 00:00:11
 
 
